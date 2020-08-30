@@ -1,0 +1,15 @@
+<div class=post-content>
+    <%= @post.title %>
+    <%= @post.content %>
+    <% @post.categories.each do |category| %>
+        <%= category.name %>
+    <% end %>
+</div>
+Commentors:
+<ul>
+<% @post.users.distinct.each do |user| %>
+  <li>
+    <%= link_to user.username, user_path(user) %>
+  </li>
+<% end %>
+</ul>

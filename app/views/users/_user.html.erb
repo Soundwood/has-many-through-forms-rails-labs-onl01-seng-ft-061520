@@ -1,0 +1,7 @@
+<div class=user>
+  <%= @user.username %>
+  <%= @user.email %>
+  <% @user.posts.each do |post| %>
+    <%= post.title %>
+  <% end %>
+</div>
